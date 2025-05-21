@@ -3,11 +3,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 7fr;
     color: white;
-    /* background-image: url(./assets/gif/error.gif);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: right;
-    background-size: 100% 100%; */
 }
 
 
@@ -237,4 +232,320 @@ h1 {
 #hey {
     animation: Hey 4s linear 0s infinite normal forwards;
     margin-bottom: 2%;
+}
+
+
+@media (max-width: 1024px) {
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+.header-btn {
+    height: 150px;
+    font-weight: bolder;
+    border: 0;
+
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px 20px 10px;
+    padding: 0;
+}
+
+.mycontainer.participations2 {
+    display: grid;
+    grid-template-columns: fr 2fr;
+    align-items: center;
+    text-align: justify;
+    gap: 100px;
+}
+.mycontainer.participations1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    text-align: justify;
+    gap:100px;
+    margin-bottom: 20px;
+}
+}
+/* Default (desktop): hide toggle */
+.navbar-toggle {
+    display: none;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .navbar-toggle {
+        display: block;
+        align-self: flex-start;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        max-height: 500px; /* Enough to show all items */
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+}
+
+/* Mobile (phones) optimization */
+@media (max-width: 480px) {
+    body {
+        grid-template-columns: 1fr;
+        font-size: 12px; /* smaller font */
+        display: block;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        writing-mode: horizontal-tb;
+        width: 100%;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .header-btn {
+        height: auto;
+        padding: 10px;
+        font-size: 12px; /* smaller buttons text */
+        width: 100%;
+        text-align: left;
+    }
+
+    .logo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 25px;  /* slightly smaller logos */
+        width: 25px;
+    }
+
+    .mainbody {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .mycontainer,
+    .mycontainer.skills,
+    .mycontainer.participations1,
+    .mycontainer.participations2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mycontainer img,
+    .certificate img,
+    #photoTrend,
+    #photo {
+        width: 100%;
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Hide large images on mobile */
+    #photoTrend,
+    #photo {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1rem; /* smaller headings */
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        font-size: 1.8rem; /* smaller toggle icon */
+        align-self: flex-start;
+    }
+
+    .slider {
+        mask-image: none;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 768px) {
+     body {
+        grid-template-columns: 1fr;
+        font-size: 12px; /* smaller font */
+        display: block;
+        padding: 0 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        writing-mode: horizontal-tb;
+        width: 100%;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .header-btn {
+        height: auto;
+        padding: 10px;
+        font-size: 12px; /* smaller buttons text */
+        width: 100%;
+        text-align: left;
+    }
+    .logo {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .logo img {
+        height: 25px;  /* slightly smaller logos */
+        width: 25px;
+    }
+
+    .mainbody {
+        margin-right: 0;
+        padding: 10px;
+    }
+
+    .mycontainer,
+    .mycontainer.skills,
+    .mycontainer.participations1,
+    .mycontainer.participations2 {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .mycontainer img,
+    .certificate img,
+    #photoTrend,
+    #photo {
+        width: 100%;
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Hide large images on mobile */
+    #photoTrend,
+    #photo {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1rem; /* smaller headings */
+        text-align: center;
+    }
+
+    .navbar-toggle {
+        font-size: 1.8rem; /* smaller toggle icon */
+        align-self: flex-start;
+    }
+
+    .slider {
+        mask-image: none;
+    }
+}
+
+/* Fix nav-links order in collapsed nav */
+@media (max-width: 768px), (orientation: portrait) and (max-width: 768px) {
+  .nav-links {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start;
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    width: 100%;
+  }
+
+  .nav-links.show {
+    max-height: 500px; /* enough to show all nav items */
+  }
+}
+
+@media (max-width: 768px) {
+  .mycontainer.participations1,
+  .mycontainer.participations2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: justify;
+  }
+
+  /* Force text first, image second */
+  .mycontainer > div:nth-child(1):has(p) {
+    order: 2;
+  }
+
+  .mycontainer > div:nth-child(2):has(img) {
+    order: 1;
+  }
+
+  /* Handle the opposite case (img then p) */
+  .mycontainer > div:nth-child(1):has(img) {
+    order: 1;
+  }
+
+  .mycontainer > div:nth-child(2):has(p) {
+    order: 2;
+  }
+
+  .mycontainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  .mycontainer p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 }

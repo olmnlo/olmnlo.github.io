@@ -17,10 +17,10 @@
     <div id="background">
         <img src="./assets/gif/error.gif" alt="error" id="error">
     </div>
-    <section id="navbar">
+    <!-- <section id="navbar">
         <div class="container">
         <nav class="navbar">
-            <ul class="logo" style="margin-bottom: 40px; list-style: none;">
+            <ul class="logo" style="list-style: none;">
                 <li>
             <a
                 class="text-body-secondary"
@@ -54,7 +54,36 @@
         </div>
 
 </div>
-    </section>
+    </section> -->
+
+    <section id="navbar">
+    <div class="container">
+        <nav class="navbar">
+            <ul class="logo" style="list-style: none;">
+                <!-- social links -->
+            </ul>
+
+            <!-- ✅ Toggle button -->
+            <button class="navbar-toggle">☰</button>
+
+            <!-- ✅ Links wrapper -->
+            <div class="nav-links">
+                <a href="#about"><button class="btn btn-outline-light header-btn">About</button></a>
+                <a href="#experience"><button class="btn btn-outline-light header-btn">Experience</button></a>
+                <a href="#skills"><button class="btn btn-outline-light header-btn">Skills</button></a>
+                <a href="#participations"><button class="btn btn-outline-light header-btn">Participate</button></a>
+                <a href="#Certificates"><button class="btn btn-outline-light header-btn">Certificate</button></a>
+            </div>
+
+            <div class="logo">
+                <!-- logos -->
+            </div>
+        </nav>
+    </div>
+</section>
+
+
+
 
     <section id="body">
         <div class="mainbody">
@@ -161,7 +190,7 @@
                     </div>
                     <div class="mycontainer participations2" style="align-items: center;" >
                         <div>
-                            <img src="./assets/img/coomputer_club.png" alt="CS_Club" class="img-fluid" style="float: left;">
+                            <img src="./assets/img/coomputer_club.png" alt="CS_Club" class="img-fluid" style="float: left;" id="CS_Club">
                         </div>
                         <div>
                             <p class="font-monospace fs-2 mt-4" id="JubailClub">
@@ -253,5 +282,17 @@
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"
     ></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.querySelector('.navbar-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        toggleBtn.addEventListener('click', function () {
+            navLinks.classList.toggle('show');
+        });
+    });
+</script>
+
 </body>
 </html>
