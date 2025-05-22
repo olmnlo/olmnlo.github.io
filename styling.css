@@ -28,7 +28,6 @@ body {
     display: flex;
     flex-direction: row;
     width: fit-content;
-    height: 100%;
     writing-mode: sideways-lr;
     align-items: center;
     justify-content: space-between;
@@ -262,7 +261,7 @@ h1 {
     flex-direction: row;
     align-items: center;
     gap: 10px;
-    margin: 10px 0px 20px 10px;
+    margin: 10px 0px 25px 10px;
     padding: 0;
 }
 
@@ -444,8 +443,8 @@ h1 {
     }
 
     .logo img {
-        height: 25px;  /* slightly smaller logos */
-        width: 25px;
+        height: 45px;  /* slightly smaller logos */
+        width: 45px;
     }
 
     .mainbody {
